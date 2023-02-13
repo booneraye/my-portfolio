@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  faFlag,
   faFlagCheckered,
   faPen,
   faSchool,
-  faSearch,
   faSuitcase,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

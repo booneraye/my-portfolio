@@ -1,10 +1,7 @@
 import React from "react";
 import { Col, Row } from "shards-react";
 import Typewriter from "typewriter-effect";
-
-import AwesomeSlider from "react-awesome-slider";
 import Image1 from "../assets/images/1.png";
-import Image2 from "../assets/images/1.png";
 
 const MainCover = () => {
   return (
