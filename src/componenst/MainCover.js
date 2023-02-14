@@ -22,7 +22,8 @@ const MainCover = () => {
             <Typewriter
               options={{
                 strings: [
-                  "Frontend Developer",
+                  "Front-end Developer",
+                  "Web Developer",
                   "IT Specialist",
                   "Digital Marketer",
                   "SEO Specialist",
