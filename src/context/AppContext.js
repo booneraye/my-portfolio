@@ -8,11 +8,11 @@ export function useAppData() {
 
 export const AppContext = ({ children }) => {
   const [current, setCurrent] = useState(
-    window.localStorage.getItem("current") || "home"
+    window.localStorage.getItem("current") || "#home"
   );
 
   useEffect(() => {
-    const element = document.getElementById(current);
+    const element = document.getElementById(current.replace("/#", ""));
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
