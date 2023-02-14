@@ -17,7 +17,7 @@ const Header = () => {
   const NavLink = (props) => {
     return (
       <Link
-        href={`#${props.value}`}
+        href={`${props.value}`}
         style={{
           color:
             props.value === current
@@ -36,10 +36,10 @@ const Header = () => {
   };
 
   const MENU = [
-    { value: "home", label: "Home" },
-    { value: "skills", label: "Skills" },
-    { value: "my-projects", label: "My Projects" },
-    { value: "carreer-history", label: "Carreer History" },
+    { value: "/#home", label: "Home" },
+    { value: "/#skills", label: "Skills" },
+    { value: "/my-projects", label: "My Projects" },
+    { value: "/#carreer-history", label: "Carreer History" },
   ];
 
   return (
