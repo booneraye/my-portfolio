@@ -1,16 +1,15 @@
-import React from 'react'
-import Header from './componenst/Header'
-import MainCover from './componenst/MainCover'
-import WorkHistory from './componenst/WorkHistory'
+import React from "react";
+import { Router } from "@reach/router";
+import LandingPage from "./pages/LandingPage";
 
 const App = () => {
   return (
     <div>
-      <Header/>
-      <MainCover />
-      <WorkHistory/>
+      <Router>
+        <LandingPage path="/" />
+      </Router>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
