@@ -17,17 +17,17 @@ const Header = () => {
   const NavLink = (props) => {
     return (
       <Link
-        href={`#${props.value}`}
+        href={`${props.value}`}
         style={{
           color:
-            props.value === current
+            props.value.replace("/#") === current
               ? "rgba(255,255,255,.7)"
               : "rgba(255,255,255,.5)",
-          fontWeight: props.value === current ? "500" : "normal",
+          fontWeight: props.value.replace("/#") === current ? "500" : "normal",
         }}
         onClick={() =>
           setCurrent(props.value) ||
-          window.localStorage.setItem("current", props.value)
+          window.localStorage.setItem("current", props.value.replace("/#", ""))
         }
       >
         {props.label}
@@ -36,10 +36,10 @@ const Header = () => {
   };
 
   const MENU = [
-    { value: "home", label: "Home" },
-    { value: "skills", label: "Skills" },
-    { value: "my-projects", label: "My Projects" },
-    { value: "carreer-history", label: "Carreer History" },
+    { value: "/#home", label: "Home" },
+    { value: "/#skills", label: "Skills" },
+    { value: "/#carreer-history", label: "Carreer History" },
+    { value: "/react-js-projects", label: "React Projects" },
   ];
 
   return (

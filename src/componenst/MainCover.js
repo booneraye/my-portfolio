@@ -25,6 +25,7 @@ const MainCover = () => {
                   "Front-end Developer",
                   "Web Developer",
                   "IT Specialist",
+                  "Social Media Manager",
                   "Digital Marketer",
                   "SEO Specialist",
                 ],
