@@ -8,7 +8,7 @@ const WordPressProjects = () => {
   return (
     <div style={{ padding: "20px 3%" }}>
       <h3 style={{ margin: 5, marginBottom: 30, textAlign: "center" }}>
-        My Arduino Projects
+        My WordPress Projects
       </h3>
       <Row>
         {WORDPRESS_PROJECTS.map((project) => ({
