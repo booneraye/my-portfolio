@@ -10,14 +10,12 @@ import WordPressProjects from "./pages/WordPressProjects";
 const App = () => {
   return (
     <div>
-      <Header/>
       <Router>
         <LandingPage path="/" />
         <ReactJSProjects path="/react-js-projects"/>
         <ArduinoProjects path="/arduino-projects"/>
         <WordPressProjects path="/wordpress-projects"/>
       </Router>
-      <Footer/>
     </div>
   );
 };
