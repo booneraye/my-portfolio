@@ -26,7 +26,7 @@ const ProjectCard = (props) => {
           ))}
           {props.project.link && (
             <Button onClick={() => window.open(props.project.link)} className="my-primary-btn">
-              View Website
+              {props.project.btn_label}
             </Button>
           )}
           <Button theme="light" onClick={() => setOpen("")} style={{margin: 5}}>
