@@ -11,7 +11,7 @@ import {
 import { useAppData } from "../context/AppContext";
 
 const Header = () => {
-  const { current, setCurrent } = useAppData();
+  const { current, setCurrent, MENU } = useAppData();
   const [open, setOpen] = useState(false);
 
   const NavLink = (props) => {
@@ -35,12 +35,7 @@ const Header = () => {
     );
   };
 
-  const MENU = [
-    { value: "/#home", label: "Home" },
-    { value: "/#skills", label: "Skills" },
-    { value: "/#carreer-history", label: "Carreer History" },
-    { value: "/react-js-projects", label: "React Projects" },
-  ];
+  
 
   return (
     <Navbar expand="md" type="dark">
