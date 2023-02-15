@@ -4,6 +4,8 @@ import LandingPage from "./pages/LandingPage";
 import Header from "./componenst/Header";
 import Footer from "./componenst/Footer";
 import ReactJSProjects from "./pages/ReactJSProjects";
+import ArduinoProjects from "./pages/ArduinoProjects";
+import WordPressProjects from "./pages/WordPressProjects";
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
       <Router>
         <LandingPage path="/" />
         <ReactJSProjects path="/react-js-projects"/>
+        <ArduinoProjects path="/arduino-projects"/>
+        <WordPressProjects path="/wordpress-projects"/>
       </Router>
       <Footer/>
     </div>
