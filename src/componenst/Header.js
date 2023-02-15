@@ -1,41 +1,35 @@
 import React, { useState } from "react";
+import { Link } from "@reach/router";
 import {
   NavbarBrand,
   Navbar,
   NavbarToggler,
   Nav,
   NavItem,
-  NavLink as Link,
   Collapse,
 } from "shards-react";
 import { useAppData } from "../context/AppContext";
 
 const Header = () => {
-  const { current, setCurrent, MENU } = useAppData();
+  const { smoothScroll, current, setCurrent, MENU } = useAppData();
   const [open, setOpen] = useState(false);
 
-  const NavLink = (props) => {
+  const NavLink = ({ children, ...props }) => {
     return (
-      <Link
-        href={`${props.value}`}
-        style={{
-          color:
-            props.value.replace("/#") === current
-              ? "rgba(255,255,255,.7)"
-              : "rgba(255,255,255,.5)",
-          fontWeight: props.value.replace("/#") === current ? "500" : "normal",
-        }}
-        onClick={() =>
-          setCurrent(props.value) ||
-          window.localStorage.setItem("current", props.value.replace("/#", ""))
-        }
-      >
-        {props.label}
-      </Link>
+      <>
+        <Link
+          getProps={({ isCurrent }) => {
+            return isCurrent
+              ? { className: "active nav-link" }
+              : { className: "nav-link" };
+          }}
+          {...props}
+        >
+          {children}
+        </Link>
+      </>
     );
   };
-
-  
 
   return (
     <Navbar expand="md" type="dark">
@@ -45,7 +39,18 @@ const Header = () => {
         <Nav navbar>
           {MENU.map((menu, index) => (
             <NavItem>
-              <NavLink value={menu.value} label={menu.label} />
+              <NavLink
+                to={menu.value}
+                onClick={() =>
+                  smoothScroll(menu.value.replace("#", "").replace("/", "")) ||
+                  window.localStorage.setItem(
+                    "current",
+                    menu.value.replace("#", "").replace("/", "")
+                  )
+                }
+              >
+                {menu.label}
+              </NavLink>
             </NavItem>
           ))}
         </Nav>

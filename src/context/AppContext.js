@@ -21,8 +21,8 @@ export const AppContext = ({ children }) => {
     { value: "/#skills", label: "Skills" },
     { value: "/#carreer-history", label: "Carreer History" },
     { value: "/react-js-projects", label: "React Projects" },
-    {value: "/arduino-projects", label: "Arduino Projects"},
-    {value: "/wordpress-projects", label: "WordPress Projects"}
+    { value: "/arduino-projects", label: "Arduino Projects" },
+    { value: "/wordpress-projects", label: "WordPress Projects" },
   ];
 
   useEffect(() => {
@@ -36,9 +36,21 @@ export const AppContext = ({ children }) => {
     }
   }, [current]);
 
+  const smoothScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
+      });
+    }
+  };
+
   return (
     <Context.Provider
       value={{
+        smoothScroll,
         current,
         setCurrent,
         screenWidth,
