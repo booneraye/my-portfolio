@@ -1,4 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import useMediaQuery from "use-mediaquery";
+import { REACT_JS_PROJECTS } from "../projects/react-js-projects";
 
 const Context = createContext();
 
@@ -7,6 +9,7 @@ export function useAppData() {
 }
 
 export const AppContext = ({ children }) => {
+  const screenWidth = useMediaQuery("(max-width: 800px)");
   const [current, setCurrent] = useState(
     window.localStorage.getItem("current") || "home"
   );
@@ -23,7 +26,9 @@ export const AppContext = ({ children }) => {
   }, [current]);
 
   return (
-    <Context.Provider value={{ current, setCurrent }}>
+    <Context.Provider
+      value={{ current, setCurrent, screenWidth, REACT_JS_PROJECTS }}
+    >
       {children}
     </Context.Provider>
   );
