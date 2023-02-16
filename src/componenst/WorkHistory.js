@@ -51,9 +51,9 @@ const WorkHistory = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          contentStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(16, 204, 82)" }}
-          iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+          contentStyle={{ background: "#E24D24", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #E24D24" }}
+          iconStyle={{ background: "#E24D24", color: "#fff" }}
           icon={<FontAwesomeIcon icon={faFlagCheckered} />}
         >
           <h6 className="vertical-timeline-element-subtitle">
@@ -132,7 +132,7 @@ const WorkHistory = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+          iconStyle={{ background: "#E24D24", color: "#fff" }}
           icon={<FontAwesomeIcon icon={faFlagCheckered} />}
         />
       </VerticalTimeline>

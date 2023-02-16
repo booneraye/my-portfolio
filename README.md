@@ -1,6 +1,6 @@
 Welcome to my portfolio.
 
-##Boone Raye Flores
+## Boone Raye Flores
 
 I'm a career shifter who previously worked in sales and marketing. My responsibilities included social media management, content creation, and merchant and partner acquisition.
 
