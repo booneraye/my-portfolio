@@ -53,10 +53,6 @@ nav {
   padding: 5%;
   text-align: center;
 }
-<<<<<<< HEAD
-.row {
-  margin: 0 !important;
-=======
 
 
 @media only screen and (max-width: 800px) {
@@ -64,7 +60,6 @@ nav {
     width: 100%;
   }
   
->>>>>>> 91b49b30341b4d41ac9db2abd3d4b611701685fb
 }
 
 .modal-backdrop.show {
@@ -73,15 +68,8 @@ nav {
 
 .modal-backdrop {
   background-color: #000000 !important;
-<<<<<<< HEAD
-}
-=======
 }
 
-.my-primary-btn{
-  background-color: #CE2C5A !important;
-  border: 0px solid #CE2C5A !important;
-}
 .project-button{
   width: 100% !important;
   background-color: #CE2C5A !important;
@@ -92,4 +80,3 @@ nav {
 .row{
   margin: 0 !important;
 }
->>>>>>> 91b49b30341b4d41ac9db2abd3d4b611701685fb

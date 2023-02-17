@@ -16,34 +16,6 @@ const Header = () => {
 
   const NavLink = ({ children, ...props }) => {
     return (
-<<<<<<< HEAD
-      <Link
-        href={`${props.value}`}
-        style={{
-          color:
-            props.value === current
-              ? "rgba(255,255,255,.7)"
-              : "rgba(255,255,255,.5)",
-          fontWeight: props.value === current ? "500" : "normal",
-        }}
-        onClick={() =>
-          setCurrent(props.value) ||
-          window.localStorage.setItem("current", props.value)
-        }
-      >
-        {props.label}
-      </Link>
-    );
-  };
-
-  const MENU = [
-    { value: "/#home", label: "Home" },
-    { value: "/#skills", label: "Skills" },
-    { value: "/my-projects", label: "My Projects" },
-    { value: "/#carreer-history", label: "Carreer History" },
-  ];
-
-=======
       <>
         <Link
           getProps={({ isCurrent }) => {
@@ -59,7 +31,6 @@ const Header = () => {
     );
   };
 
->>>>>>> 91b49b30341b4d41ac9db2abd3d4b611701685fb
   return (
     <Navbar expand="md" type="dark">
       <NavbarToggler onClick={() => setOpen(!open)} />
