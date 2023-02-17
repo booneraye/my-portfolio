@@ -5,12 +5,13 @@ import Image1 from "../assets/images/1.png";
 import { ReactComponent as Facebook } from "../assets/icons/facebook.svg";
 import { ReactComponent as LinkedIn } from "../assets/icons/linkedin.svg";
 import { ReactComponent as GitHub } from "../assets/icons/github.svg";
+import SectionContainer from "./SectionContainer";
 
 const MainCover = () => {
   return (
-    <div style={{ margin: 0, display: "block" }} id="home">
+    <SectionContainer id="home">
       <Row style={{ margin: 0 }}>
-        <Col md={7} style={{ padding: "5% 6% 2% 6%" }}>
+        <Col md={7} style={{ padding: "0% 5% 2% 0%" }}>
           <h3>Hello! 👋,</h3>
           <h1>
             I'm{" "}
@@ -82,7 +83,7 @@ const MainCover = () => {
           <img src={Image1} className="landing-page-image" />
         </Col>
       </Row>
-    </div>
+    </SectionContainer>
   );
 };
 

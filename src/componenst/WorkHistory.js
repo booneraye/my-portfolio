@@ -10,12 +10,11 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import SectionContainer from "./SectionContainer";
 
 const WorkHistory = () => {
   return (
-    <div id="carreer-history">
-      <hr style={{ width: "25%" }} />
-      <h3 style={{ margin: 10, textAlign: "center" }}>Carreer History</h3>
+    <SectionContainer id="carreer-history" title="Carreer History">
       <VerticalTimeline lineColor="#dbdbdb">
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -136,7 +135,7 @@ const WorkHistory = () => {
           icon={<FontAwesomeIcon icon={faFlagCheckered} />}
         />
       </VerticalTimeline>
-    </div>
+    </SectionContainer>
   );
 };
 

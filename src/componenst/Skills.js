@@ -10,13 +10,12 @@ import { ReactComponent as Mysql } from "../assets/icons/mysql.svg";
 import { ReactComponent as Wordpress } from "../assets/icons/wordpress.svg";
 import { ReactComponent as Woocommerce } from "../assets/icons/woocommerce.svg";
 import { Col, Row } from "shards-react";
+import SectionContainer from "./SectionContainer";
 
 const Skills = () => {
   return (
-    <div style={{ textAlign: "center" }} id="skills">
-      <hr style={{ width: "25%" }} />
-      <h3 style={{ margin: "0 auto" }}>Skills</h3>
-      <Row style={{ padding: "0% 5% 0% 5%", margin: 0 }}>
+    <SectionContainer id="skills" title="Skills">
+      <Row>
         <Col md={2} sm={6} xs={6} style={{ padding: 20 }}>
           <GitHub width="100px" height="100px" />
         </Col>
@@ -48,7 +47,7 @@ const Skills = () => {
           <Woocommerce width="100px" height="100px" />
         </Col>
       </Row>
-    </div>
+    </SectionContainer>
   );
 };
 

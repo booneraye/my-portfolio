@@ -1,4 +1,5 @@
 import React from "react";
+import FeaturedProjects from "../componenst/FeaturedProjects";
 import MainCover from "../componenst/MainCover";
 import PageContainer from "../componenst/PageContainer";
 import Skills from "../componenst/Skills";
@@ -9,6 +10,7 @@ const LandingPage = () => {
     <PageContainer>
       <MainCover />
       <Skills/>
+      <FeaturedProjects/>
       <WorkHistory />
     </PageContainer>
   );
