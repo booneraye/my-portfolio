@@ -17,12 +17,20 @@ export const AppContext = ({ children }) => {
   );
 
   const MENU = [
-    { value: "/#home", label: "Home" },
-    { value: "/#skills", label: "Skills" },
-    { value: "/#carreer-history", label: "Carreer History" },
-    { value: "/react-js-projects", label: "React Projects" },
-    { value: "/arduino-projects", label: "Arduino Projects" },
-    { value: "/wordpress-projects", label: "WordPress Projects" },
+    { value: "/#home", label: "Home", type: "link" },
+    { value: "/#skills", label: "Skills", type: "link" },
+    { value: "/#featured-projects", label: "Featured Projects", type: "link" },
+    { value: "/#carreer-history", label: "Carreer History", type: "link" },
+    {
+      value: "projects",
+      label: "My Projects",
+      type: "dropdown",
+      list: [
+        { value: "/react-js-projects", label: "React Projects" },
+        { value: "/arduino-projects", label: "Arduino Projects" },
+        { value: "/wordpress-projects", label: "WordPress Projects" },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -47,6 +55,9 @@ export const AppContext = ({ children }) => {
     }
   };
 
+  const MY_PROJECTS =
+    REACT_JS_PROJECTS.concat(ARDUINO_PROJECTS).concat(WORDPRESS_PROJECTS);
+
   return (
     <Context.Provider
       value={{
@@ -58,6 +69,7 @@ export const AppContext = ({ children }) => {
         REACT_JS_PROJECTS,
         ARDUINO_PROJECTS,
         WORDPRESS_PROJECTS,
+        MY_PROJECTS,
       }}
     >
       {children}

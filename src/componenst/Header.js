@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "@reach/router";
+import { Link, useNavigate } from "@reach/router";
 import {
   NavbarBrand,
   Navbar,
@@ -7,12 +7,19 @@ import {
   Nav,
   NavItem,
   Collapse,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
 } from "shards-react";
 import { useAppData } from "../context/AppContext";
 
 const Header = () => {
   const { smoothScroll, current, setCurrent, MENU } = useAppData();
   const [open, setOpen] = useState(false);
+  const [openDropdown, setOpenDropDown] = useState("");
+
+  const navigate = useNavigate();
 
   const NavLink = ({ children, ...props }) => {
     return (
@@ -37,7 +44,7 @@ const Header = () => {
       <NavbarBrand href="#home">💻 Portfolio 101</NavbarBrand>
       <Collapse open={open} navbar>
         <Nav navbar>
-          {MENU.map((menu, index) => (
+          {MENU.filter((menu) => menu.type === "link").map((menu, index) => (
             <NavItem>
               <NavLink
                 to={menu.value}
@@ -53,6 +60,28 @@ const Header = () => {
               </NavLink>
             </NavItem>
           ))}
+
+          {MENU.filter((menu) => menu.type === "dropdown").map(
+            (menu, index) => (
+              <Dropdown
+                open={openDropdown === menu.value}
+                toggle={() =>
+                  setOpenDropDown(openDropdown === menu.value ? "" : menu.value)
+                }
+              >
+                <DropdownToggle nav caret>
+                  {menu.label}
+                </DropdownToggle>
+                <DropdownMenu>
+                  {menu.list.map((l) => (
+                    <DropdownItem onClick={() => navigate(l.value)}>
+                      {l.label}
+                    </DropdownItem>
+                  ))}
+                </DropdownMenu>
+              </Dropdown>
+            )
+          )}
         </Nav>
       </Collapse>
     </Navbar>
