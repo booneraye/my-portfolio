@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "shards-react";
-import PageContainer from "../componenst/PageContainer";
-import ProjectCard from "../componenst/ProjectCard";
+import PageContainer from "../components/PageContainer";
+import ProjectCard from "../components/ProjectCard";
 import { useAppData } from "../context/AppContext";
 
 const ArduinoProjects = () => {

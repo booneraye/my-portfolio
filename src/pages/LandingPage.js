@@ -1,9 +1,9 @@
 import React from "react";
-import FeaturedProjects from "../componenst/FeaturedProjects";
-import MainCover from "../componenst/MainCover";
-import PageContainer from "../componenst/PageContainer";
-import Skills from "../componenst/Skills";
-import WorkHistory from "../componenst/WorkHistory";
+import FeaturedProjects from "../sections/FeaturedProjects";
+import MainCover from "../sections/MainCover";
+import PageContainer from "../components/PageContainer";
+import Skills from "../sections/Skills";
+import WorkHistory from "../sections/WorkHistory";
 
 const LandingPage = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "shards-react";
-import ProjectCard from "../componenst/ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 import { PROJECTS } from "../data/project-list";
 
 const MyProjects = () => {
