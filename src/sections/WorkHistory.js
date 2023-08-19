@@ -10,7 +10,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import SectionContainer from "./SectionContainer";
+import SectionContainer from "../components/SectionContainer";
 
 const WorkHistory = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Row } from "shards-react";
 import { useAppData } from "../context/AppContext";
-import ProjectCard from "./ProjectCard";
-import SectionContainer from "./SectionContainer";
+import ProjectCard from "../components/ProjectCard";
+import SectionContainer from "../components/SectionContainer";
 
 const FeaturedProjects = () => {
   const { MY_PROJECTS } = useAppData();
