@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import useMediaQuery from "use-mediaquery";
-import { REACT_JS_PROJECTS } from "../projects/react-js-projects";
-import { ARDUINO_PROJECTS } from "../projects/arduino-projects";
-import { WORDPRESS_PROJECTS } from "../projects/wordpress-projects";
+import { REACT_JS_PROJECTS } from "../data/projects/react-js-projects";
+import { ARDUINO_PROJECTS } from "../data/projects/arduino-projects";
+import { WORDPRESS_PROJECTS } from "../data/projects/wordpress-projects";
+import { INFO } from "../data/basic-info";
 
 const Context = createContext();
 
@@ -12,9 +13,7 @@ export function useAppData() {
 
 export const AppContext = ({ children }) => {
   const screenWidth = useMediaQuery("(max-width: 800px)");
-  const [current, setCurrent] = useState(
-    window.localStorage.getItem("current") || "#home"
-  );
+  const [current, setCurrent] = useState("#home");
 
   const MENU = [
     { value: "/#home", label: "Home", type: "link" },
@@ -70,6 +69,7 @@ export const AppContext = ({ children }) => {
         ARDUINO_PROJECTS,
         WORDPRESS_PROJECTS,
         MY_PROJECTS,
+        INFO,
       }}
     >
       {children}
