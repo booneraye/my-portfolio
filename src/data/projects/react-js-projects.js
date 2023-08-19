@@ -1,6 +1,14 @@
 module.exports={
     REACT_JS_PROJECTS: [
         {
+            title: "Travel Tayo",
+            description: `Travel Tayo is an online travel platform where user can create travel plan and utilize travel calendar. They can also book travel packages and more.`,
+            link: "https://traveltayo.com",
+            cover: "/images/projects/react-js-projects/travel-tayo.png",
+            btn_label: "View Website",
+            featured: true
+        },
+        {
             title: "Biyaheroes",
             description: `Biyaheroes is a one-stop shop for booking bus and ferry rides online. I have been a part of this exciting project and made a minor contribution to the website by transforming the flip cards, enhancing the destination gallery, and addressing some design issues on the admin dashboard. \nThis project has been an eye-opening experience for me as it was my first coding-related project and I was faced with the challenge of working with Angular. Despite the difficulties, I am proud to have been a part of this project and to have learned valuable skills and knowledge in the process. `,
             link: "https://biyaheroes.com",
